@@ -5,6 +5,7 @@ tags: [Test, Ipsum, Markdown, Portfolio]
 ---
 
 # I am a BIG title
+## I am a SMALL title
 
 This is a very tiny tiny post with less than 250 letters.
 
