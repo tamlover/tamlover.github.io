@@ -1,5 +1,5 @@
 # SITE CONFIGURATION
-baseurl: "/my-blog"
+baseurl: ""
 url: "https://tamlover.github.io"
 title: 陆离的博客 # site's title
 description: "cheer for young" # used by search engines
