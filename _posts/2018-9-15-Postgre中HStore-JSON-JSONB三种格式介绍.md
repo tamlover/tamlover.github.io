@@ -1,10 +1,3 @@
----
-layout: post
-title: PostgreSQL中HStore，JSON，JSON三种存储格式介绍
-tags: [PostgreSQL, HStore, JSON, JSONB]
----
-
-
 在Postgresql数据库中，添加了几种字段类型来满足在sql中使用类似与NoSql的键值对进行存取。
 
 # [HStore](https://www.postgresql.org/docs/9.3/static/hstore.html)
@@ -106,11 +99,11 @@ where attributes #>> '{world,world_type}' = 'earth';
 
 那么在面对这三种格式该如何选择呢？
 
-1. 如果你的需求是**键值对存取(无对象嵌套)**，并有**大量操作**，且需要**建立索引**，那么就选择HStore。
+1. 如果你的需求是__键值对存取(无对象嵌套)__，并有__大量操作__，且需要__建立索引__，那么就选择HStore。
 
 2. 如果你的需求只是**文本存取**，并**无**大量操作，那么就选择JSON，JSON存储速度快。
 
-3. 如果你的需求是**文本存取**，且有**大量操作**，并**需要建立索引**，那么就选择JSONB。
+3. 如果你的需求是__文本存取__，且有**大量操作**，并__需要建立索引__，那么就选择JSONB。
 
 
 
