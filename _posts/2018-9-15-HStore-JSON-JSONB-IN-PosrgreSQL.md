@@ -45,7 +45,7 @@ where attributes->'date' = '2018';
 
 JSON是直接的**文本存储**，所以可以嵌套对象，但是**不可以使用索引**。
 
-json中可以存储有效的[JSON](http://json.org/)值，例如``null, true, [1,false,"string",{"foo":"bar"}], {"foo":"bar","baz":[null]}``这些都可以存入json中。
+JSON中可以存储有效的[JSON](http://json.org/)值，例如这些都可以存入json中。
 
 ``` sql
 SELECT '{"foo": [true, "bar"], "tags": {"a": 1, "b": null}}'::json;
@@ -64,7 +64,7 @@ select '{"a":1,"b":2}'::json->>'b'；
 select '{"a": {"b":{"c": "foo"}}}'::json#>'{a,b}'；
 
 --根据路径获取JSON对象的文本
-select '{"a":[1,2,3],"b":[4,5,6]}'::json#>>'{a,2}'
+select '{"a":[1,2,3],"b":[4,5,6]}'::json#>>'{a,2}';
 ```
 
 再补充一个实际中的例子：
