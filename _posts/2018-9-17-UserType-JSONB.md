@@ -249,7 +249,7 @@ public class JsonUser {
 
 ## 测试
 
-这里为了方便直接实现了JPA的一个接口, 只做了一个保存操作。
+这里为了方便直接实现了JPA的一个接口, 做了一个保存操作和一个根据JSONB中的内容查询操作。
 
 ### Repository
 
@@ -297,7 +297,7 @@ public class JsonDemoApplicationTests {
 
         user.setAttributes(attributes);
         userDao.save(user);
-        
+
         System.out.println(userDao.getUserByCity("xi'an"));
     }
 
