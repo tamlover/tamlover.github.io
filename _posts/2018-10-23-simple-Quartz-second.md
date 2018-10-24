@@ -52,7 +52,7 @@ job中使用jobdataMap注入数据
 
 数据注入job，job如何拿出来呢
 
-```
+```java
     @Override
     public void execute(JobExecutionContext context)throws JobExecutionException {
         JobDataMap dataMap = context.getJobDetail().getJobDataMap();
@@ -64,7 +64,7 @@ job中使用jobdataMap注入数据
 
 
 
-该篇是接上篇的一个扩展，再讲一下如何将job和trigger持久化操作。持久化有什么好处呢，假设你是在内存中做定时任务，遇到服务宕机，机房停电，你所有的任务就丢失了，但是如果你存在数据库里，当服务再次启动的时候，Quartz的misfire机制就会启动，触发trigger，执行job。
+该篇是接上篇的一个扩展，再讲一下如何将job和trigger持久化操作。持久化有什么好处呢，假设你是在内存中做定时任务，遇到服务宕机，机房停电，你所有的任务就丢失了，但是如果你存在数据库里，当服务再次启动的时候，Quartz的misfire机制就会启动，数据库中的trigger触发，执行job。
 
 ## Quartz持久化
 
