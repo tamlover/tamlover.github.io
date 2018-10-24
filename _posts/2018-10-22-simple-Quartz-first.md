@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Quartz简单入门
+title: Quartz简单入门（一）
 tags: [Quartz,schedule,trigger,job]
 ---
 
